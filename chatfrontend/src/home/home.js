@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import "./home.scss";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import './home.css';
+import { Link } from 'react-router-dom';
 
 function Homepage({ socket }) {
-  const [username, setusername] = useState("");
-  const [roomname, setroomname] = useState("");
+  const [username, setusername] = useState('');
+  const [roomname, setroomname] = useState('');
 
   const sendData = () => {
-    if (username !== "" && roomname !== "") {
-      socket.emit("joinRoom", { username, roomname });
+    if (username !== '' && roomname !== '') {
+      socket.emit('joinRoom', { username, roomname });
     } else {
-      alert("username and roomname are must !");
+      alert('username and roomname are must !');
       window.location.reload();
     }
   };

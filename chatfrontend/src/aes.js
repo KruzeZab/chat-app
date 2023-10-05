@@ -1,13 +1,13 @@
-var aes256 = require("aes256");
+import CryptoJS from 'crypto-js';
 
-var secret_key = "uI2ooxtwHeI6q69PS98fx9SWVGbpQohO";
+var secret_key = 'uI2ooxtwHeI6q69PS98fx9SWVGbpQohO';
 
 export const to_Encrypt = (text) => {
-  var encrypted = aes256.encrypt(secret_key, text);
+  var encrypted = CryptoJS.AES.encrypt(text, secret_key).toString();
   return encrypted;
 };
 export const to_Decrypt = (cipher, username) => {
-  if (cipher.startsWith("Welcome")) {
+  if (cipher.startsWith('Welcome')) {
     return cipher;
   }
 
@@ -15,6 +15,7 @@ export const to_Decrypt = (cipher, username) => {
     return cipher;
   }
 
-  var decrypted = aes256.decrypt(secret_key, cipher);
-  return decrypted;
+  var decrypted = CryptoJS.AES.decrypt(cipher, secret_key);
+  var originalText = decrypted.toString(CryptoJS.enc.Utf8);
+  return originalText;
 };

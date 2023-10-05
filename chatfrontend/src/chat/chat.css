@@ -1,0 +1,106 @@
+.chat {
+  width: 400px;
+  height: 600px;
+  background-color: #2d343e;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.chat .user-name {
+  text-align: start;
+  width: 100%;
+}
+.chat .user-name h2 {
+  font-weight: 300;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+}
+.chat .chat-message {
+  height: 70%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-content: flex-start;
+}
+.chat .chat-message::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.chat .chat-message::-webkit-scrollbar-thumb {
+  background: #282b34;
+  border-radius: 10px;
+}
+.chat .chat-message::-webkit-scrollbar-track {
+  background: #ffac41;
+  border-radius: 10px;
+}
+.chat .chat-message {
+  scrollbar-face-color: #282b34;
+  scrollbar-track-color: #ffac41;
+}
+.chat .chat-message .message {
+  margin-left: 0px;
+  max-width: 220px;
+  padding-left: 0.5rem;
+}
+.chat .chat-message .message p {
+  font-size: 1rem;
+  background-color: #250202;
+  padding: 1rem;
+  border-radius: 0px 10px 10px 10px;
+  font-weight: 300;
+  color: #b4b6be;
+}
+.chat .chat-message .message span {
+  font-size: 0.6rem;
+  font-weight: 200;
+  color: #b4b6be;
+  padding-left: 0.5rem;
+}
+.chat .chat-message .mess-right {
+  margin-left: auto;
+  margin-right: 0px;
+  display: flex;
+  flex-direction: column;
+  max-width: 220px;
+  padding-right: 0.5rem;
+}
+.chat .chat-message .mess-right p {
+  text-align: end;
+  border-radius: 10px 0px 10px 10px;
+  background-color: #ff1e56;
+  color: white;
+}
+.chat .chat-message .mess-right span {
+  width: 100%;
+  text-align: end;
+  padding-left: 0rem;
+  padding-right: 0.5rem;
+}
+.chat .send {
+  width: 100%;
+  height: 50px;
+  display: flex;
+}
+.chat .send input {
+  width: 80%;
+  text-decoration: none;
+  background-color: #404450;
+  border: none;
+  padding-left: 1rem;
+  border-radius: 5px 0px 0px 5px;
+}
+.chat .send input:focus {
+  outline: none;
+}
+.chat .send button {
+  width: 20%;
+  border: none;
+  background-color: #ffac41;
+  border-radius: 0px 5px 5px 0px;
+}
+.chat .send button:hover {
+  cursor: pointer;
+}

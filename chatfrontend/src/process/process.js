@@ -1,7 +1,6 @@
-import { useSelector } from "react-redux";
-import "./process.scss";
+import { useSelector } from 'react-redux';
+import './process.css';
 function Process() {
-
   const state = useSelector((state) => state.ProcessReducer);
 
   return (
@@ -13,7 +12,7 @@ function Process() {
         <h4>Incoming Data</h4>
         <p>{state.cypher}</p>
       </div>
-      <div className="crypt">
+      <div className="crypt">zz
         <h4>Decypted Data</h4>
         <p>{state.text}</p>
       </div>

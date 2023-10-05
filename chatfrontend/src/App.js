@@ -1,10 +1,15 @@
-import Chat from "./chat/chat";
-import Process from "./process/process";
-import Home from "./home/home";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import "./App.scss";
-import React from "react";
-import io from "socket.io-client";
+import Chat from './chat/chat';
+import Process from './process/process';
+import Home from './home/home';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+import './App.css';
+import React from 'react';
+import io from 'socket.io-client';
+import './globals.css';
 
 const socket = io.connect('/');
 function Appmain(props) {
@@ -31,7 +36,10 @@ function App() {
           <Route path="/" exact>
             <Home socket={socket} />
           </Route>
-          <Route path="/chat/:roomname/:username" component={Appmain} />
+          <Route
+            path="/chat/:roomname/:username"
+            component={Appmain}
+          />
         </Switch>
       </div>
     </Router>
